@@ -39,39 +39,39 @@ public class Bouquet <TypeFlower extends Flower>{
         return bouquet;
     }
     
-    public void getSortByFreshness(TypeFlower[] arr){
+    public void getSortByFreshness(){
         TypeFlower buffer;
-        for (int i = arr.length - 1; i >= 0; i--){
+        for (int i = this.flowers.length - 1; i >= 0; i--){
             for (int j = 0; j < i; j++){
-                if (arr[j].freshness > arr[j + 1].freshness){
-                    buffer = arr[j];
-                    arr[j] = arr[j + 1];
-                    arr[j + 1] = buffer;
+                if (this.flowers[j].freshness > this.flowers[j + 1].freshness){
+                    buffer = this.flowers[j];
+                    this.flowers[j] = this.flowers[j + 1];
+                    this.flowers[j + 1] = buffer;
                 }
             }
         }
         System.out.println("Bouquet sorted by freshness :");
         System.out.println();
-        for (TypeFlower flower: arr){
+        for (TypeFlower flower: this.flowers){
             System.out.println("Flower : " + flower.name + ", his freshness : " + flower.freshness);
         }
         System.out.println();
     }
     
-    public void getSortByStemLength(TypeFlower[] arr){
+    public void getSortByStemLength(){
         TypeFlower buffer;
-        for (int i = arr.length - 1; i >= 0; i--){
+        for (int i = this.flowers.length - 1; i >= 0; i--){
             for (int j = 0; j < i; j++){
-                if (arr[j].stemLength > arr[j + 1].stemLength){
-                    buffer = arr[j];
-                    arr[j] = arr[j + 1];
-                    arr[j + 1] = buffer;
+                if (this.flowers[j].stemLength > this.flowers[j + 1].stemLength){
+                    buffer = this.flowers[j];
+                    this.flowers[j] = this.flowers[j + 1];
+                    this.flowers[j + 1] = buffer;
                 }
             }
         }
         System.out.println("Bouquet sorted by length of stem :");
         System.out.println();
-        for (TypeFlower flower: arr){
+        for (TypeFlower flower: this.flowers){
             System.out.println("Flower : " + flower.name + ", his stem length : " + flower.stemLength);
         }
         System.out.println();

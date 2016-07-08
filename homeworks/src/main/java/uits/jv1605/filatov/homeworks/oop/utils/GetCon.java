@@ -39,7 +39,7 @@ public class GetCon {
         short result; 
         try{
             result = Short.valueOf(getString(query));
-        }catch (IllegalArgumentException e){
+        }catch(IllegalArgumentException e){
             System.err.println("Invalid argument!");
             result = 0;
         }
@@ -50,7 +50,7 @@ public class GetCon {
         long result; 
         try{
             result = Long.valueOf(getString(query));
-        }catch (IllegalArgumentException e){
+        }catch(IllegalArgumentException e){
             System.err.println("Invalid argument!");
             result = 0;
         }
@@ -61,7 +61,7 @@ public class GetCon {
         int result; 
         try{
             result = Integer.valueOf(getString(query));
-        }catch (IllegalArgumentException e){
+        }catch(IllegalArgumentException e){
             System.err.println("Invalid argument!");
             result = 0;
         }
@@ -72,7 +72,7 @@ public class GetCon {
         float result; 
         try{
             result = Float.valueOf(getString(query));
-        }catch (IllegalArgumentException e){
+        }catch(IllegalArgumentException e){
             System.err.println("Invalid argument!");
             result = 0;
         }
@@ -83,7 +83,7 @@ public class GetCon {
         char result;
         try{
             result = getString(query).charAt(0);
-        }catch (IllegalArgumentException e){
+        }catch(IllegalArgumentException e){
             System.err.println("Invalid argument!");
             result = 0;
         }

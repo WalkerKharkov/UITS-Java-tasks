@@ -39,8 +39,8 @@ public class App {
                                             (float)(Math.random() * accessoryPrice + 1));
         Bouquet bouquet = new Bouquet(flowers, accessory, "Garden dream");
         System.out.println(bouquet.showBouquet());
-        bouquet.getSortByFreshness(flowers);
-        bouquet.getSortByStemLength(flowers);
+        bouquet.getSortByFreshness();
+        bouquet.getSortByStemLength();
         
     }
     
