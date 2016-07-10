@@ -79,6 +79,17 @@ public class GetCon {
         return result;
     }
     
+    public static double getDouble(String query){
+        double result; 
+        try{
+            result = Double.valueOf(getString(query));
+        }catch(IllegalArgumentException e){
+            System.err.println("Invalid argument!");
+            result = 0;
+        }
+        return result;
+    }
+    
     public static char getFirstChar(String query){
         char result;
         try{

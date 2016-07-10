@@ -30,10 +30,10 @@ public class Salad <TypeVegetable extends Vegetable>{
         for (int i=0; i<length; i++){
             rand = Math.random() * 1;
             saladComponent = (rand < .5) ? new Vegetative() : new Fruit();
-            salad.add(saladComponent);
+            this.salad.add(saladComponent);
             System.out.println("№ " + (i + 1) + " : " + saladComponent);
         }
-        this.flavour = flavours[(int)(Math.random() * (this.flavours.length - 1))];
+        this.flavour = this.flavours[(int)(Math.random() * (this.flavours.length - 1))];
         this.getMeasures();
         this.getVegetablesByWeight();
     }
@@ -54,10 +54,10 @@ public class Salad <TypeVegetable extends Vegetable>{
                 System.out.println("Invalid argument!");
             }
         }
-        Collections.sort(salad, comp);
+        Collections.sort(this.salad, comp);
         System.out.println("Sorted salad :");
         System.out.println();
-        for (Vegetable veg: salad){
+        for (Vegetable veg: this.salad){
             System.out.println(veg);
         }
         System.out.println();
@@ -66,7 +66,7 @@ public class Salad <TypeVegetable extends Vegetable>{
     public void searchByCalorificValue(){
         int minVal = GetCon.getInteger("Enter minimal value : ");
         int maxVal = GetCon.getInteger("Enter maximal value : ");
-        for (Vegetable veg: salad){
+        for (Vegetable veg: this.salad){
             if (MainUtils.inRange(veg.calorificValue, minVal, maxVal)){
                 System.out.println(veg);
             }    
@@ -74,14 +74,14 @@ public class Salad <TypeVegetable extends Vegetable>{
     }
     
     private void getMeasures(){
-        for (Vegetable veg: salad){
+        for (Vegetable veg: this.salad){
             this.totalWeight += veg.weight;
             this.totalCalorificValue += veg.calorificValue;
         }
     }
     
     private void getVegetablesByWeight(){
-        Iterator <Vegetable> iterator = salad.iterator();
+        Iterator <Vegetable> iterator = this.salad.iterator();
         Vegetable veg;
         String name;
         int weight;
