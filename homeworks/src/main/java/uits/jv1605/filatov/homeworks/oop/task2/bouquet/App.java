@@ -35,7 +35,7 @@ public class App {
             }
         }
         
-        Accessory accessory = new Accessory(accessorys[(int)(Math.random() * (accessorys.length - 1) + 1)],
+        Accessory accessory = new Accessory(accessorys[(int)(Math.random() * (accessorys.length - 1))],
                                             (float)(Math.random() * accessoryPrice + 1));
         Bouquet bouquet = new Bouquet(flowers, accessory, "Garden dream");
         System.out.println(bouquet.showBouquet());
