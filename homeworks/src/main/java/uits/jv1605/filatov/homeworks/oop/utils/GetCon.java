@@ -20,7 +20,6 @@ public class GetCon {
         System.out.print(query);
         inputStream = con.nextLine();
         System.out.println();
-        System.out.println();
         return inputStream;
     }
     
