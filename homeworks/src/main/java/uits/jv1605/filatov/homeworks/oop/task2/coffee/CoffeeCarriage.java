@@ -22,8 +22,8 @@ public abstract class CoffeeCarriage {
     public int quality;
     public float qualityRate;
     
-    public static final Map <String, Integer> PACKS = new HashMap <String, Integer> ();
-    public static final Map <String, Integer> PACKAGE_WEIGHTS = new HashMap <String, Integer> ();
+    public static final Map <String, Integer> PACKS = new HashMap();
+    public static final Map <String, Integer> PACKAGE_WEIGHTS = new HashMap();
     
     public String[] packs = {};
     

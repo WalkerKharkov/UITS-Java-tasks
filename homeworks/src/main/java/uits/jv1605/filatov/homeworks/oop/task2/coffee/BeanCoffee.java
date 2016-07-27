@@ -18,7 +18,7 @@ public class BeanCoffee extends CoffeeCarriage{
         super();
         this.pack = this.packs[(int)(Math.round((Math.random() * (this.packs.length - 1))))];
         this.weight = super.PACKS.get(this.pack);
-        this.price = (float)(((this.weight * Coffee.prices.get(this.sort)) / 1000) * this.qualityRate);
+        this.price = (float)(((this.weight * Coffee.PRICES.get(this.sort)) / 1000) * this.qualityRate);
         this.weight += super.PACKAGE_WEIGHTS.get(this.pack);
     }
 }

@@ -13,11 +13,11 @@ import java.util.*;
 public abstract class Coffee {
     
     public static String[] sort = {"Arabica", "Robusta", "Liberica"};
-    public static final Map <String, Integer> prices = new HashMap <String, Integer> ();
+    public static final Map <String, Integer> PRICES = new HashMap();
     
     static{    
-        prices.put("Arabica", 2000);
-        prices.put("Robusta", 1500);
-        prices.put("Liberica", 1200);
+        PRICES.put("Arabica", 2000);
+        PRICES.put("Robusta", 1500);
+        PRICES.put("Liberica", 1200);
     }
 }
